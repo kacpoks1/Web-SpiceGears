@@ -19,7 +19,7 @@ header{
   position: fixed;
   width: 100%;
   top: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.384);
   color: white;
 }
 #logo {
@@ -93,7 +93,9 @@ nav ul li:last-child {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: justify;
+  text-align: center; 
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .content {
@@ -105,17 +107,17 @@ nav ul li:last-child {
   margin-left: 15%;
   margin-right: 15%;
   overflow: hidden; /* Ukrywa nadmiar tekstu */
-
+  white-space: nowrap; 
   width: 0; /* Początkowa szerokość dla animacji */
   animation: typing 2s steps(40, end) forwards; /* Efekt pisania */
 }
 
 .content:nth-of-type(2) {
-  animation-delay: 2.5s; /* Opóźnienie dla drugiego elementu */
+  animation-delay: 2s; /* Opóźnienie dla drugiego elementu */
 }
 
 .content:nth-of-type(3) {
-  animation-delay: 5s; /* Opóźnienie dla trzeciego elementu */
+  animation-delay: 4s; /* Opóźnienie dla trzeciego elementu */
 }
 
 @keyframes typing {
@@ -124,6 +126,9 @@ nav ul li:last-child {
   }
   to {
     width: 100%; /* Pełna szerokość tekstu */
+    text-align: center;
+    text-wrap:wrap;
+    
   }
 }
 button {
