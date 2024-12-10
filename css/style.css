@@ -157,6 +157,8 @@ button {
   width: 1400px; /* Pokazujemy 3 obrazy, każdy ma szerokość 350px */
   position: relative;
   transition: transform 3s ease-in-out; /* Płynna animacja przesunięcia */
+  background-color: white;
+  border-radius: 16px;
 
 }
 .img-box {
