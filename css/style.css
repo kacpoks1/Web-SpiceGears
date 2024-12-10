@@ -180,7 +180,7 @@ button {
 
 .gallery-image img {
   height: 250px;
-  width: 350px;
+  width: auto;
   object-fit: cover; /* Zachowuje proporcje obrazu */
 }
 
