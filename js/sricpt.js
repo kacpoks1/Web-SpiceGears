@@ -15,3 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ustawiamy język
     setLanguage(language);
 });
+
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
+injectSpeedInsights();
