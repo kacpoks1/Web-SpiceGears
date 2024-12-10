@@ -24,7 +24,7 @@ const images = document.querySelectorAll('.img-box');
 function adjustVisibleCount() {
     if (window.innerWidth < 768) {
       return 1;  // Tylko 1 zdjęcie na małych ekranach
-    } else if (window.innerWidth >= 768 && window.innerWidth <= 1000) {
+    } else if (window.innerWidth >= 768 && window.innerWidth <= 1200) {
       return 2;  // 2 zdjęcia na ekranach od 768px do 1400px
     } else {
       return 3;  // 3 zdjęcia na większych ekranach powyżej 1400px
