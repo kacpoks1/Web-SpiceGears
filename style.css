@@ -113,11 +113,17 @@ nav ul li:last-child {
 }
 
 .content:nth-of-type(2) {
-  animation-delay: 2s; /* Opóźnienie dla drugiego elementu */
+  animation-delay: 1.5s; /* Opóźnienie dla drugiego elementu */
 }
 
 .content:nth-of-type(3) {
-  animation-delay: 4s; /* Opóźnienie dla trzeciego elementu */
+  animation-delay: 3.5s; /* Opóźnienie dla trzeciego elementu */
+}
+.content:nth-of-type(4){
+  animation-delay: 5.5s;
+}
+.content:nth-of-type(5){
+  animation-delay: 7.5s;
 }
 
 @keyframes typing {
