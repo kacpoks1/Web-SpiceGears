@@ -304,4 +304,8 @@ footer {
     max-width: 80%; 
     margin: 20px auto;  
 }
+.footer-left{
+  margin-left: 10px;
 }
+}
+
