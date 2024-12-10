@@ -87,6 +87,10 @@ nav ul li:last-child {
   margin-top: 60px;
   margin-bottom: 30px;
   font-size: 30px;
+  overflow: hidden; /* Ukrywa nadmiar tekstu */
+  white-space:nowrap; 
+  width: 0; /* Początkowa szerokość dla animacji */
+  animation: typing 2s steps(40, end) forwards; /* Efekt pisania */
 }
 .center{
   display: flex;
@@ -106,25 +110,9 @@ nav ul li:last-child {
   margin-bottom: 50px;
   margin-left: 15%;
   margin-right: 15%;
-  overflow: hidden; /* Ukrywa nadmiar tekstu */
-  white-space:nowrap; 
-  width: 0; /* Początkowa szerokość dla animacji */
-  animation: typing 2s steps(40, end) forwards; /* Efekt pisania */
 }
 
-.content:nth-of-type(2) {
-  animation-delay: 1.5s; /* Opóźnienie dla drugiego elementu */
-}
 
-.content:nth-of-type(3) {
-  animation-delay: 3.5s; /* Opóźnienie dla trzeciego elementu */
-}
-.content:nth-of-type(4){
-  animation-delay: 5.5s;
-}
-.content:nth-of-type(5){
-  animation-delay: 7.5s;
-}
 
 @keyframes typing {
   from {
@@ -344,6 +332,19 @@ footer {
     max-width: 80%; 
     margin: 20px auto;  
 }
+
+.gallery-image {
+  width: 350px; 
+}
+
+.img-box {
+  width: auto; 
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+}
 footer {
   flex-direction: column;
   align-items:start;
@@ -369,18 +370,6 @@ footer {
 .social-icons {
   margin-bottom: 20px;
 }
-.gallery-image {
-  width: 350px; /* Pokazujemy tylko jedno zdjęcie */
-}
 
-.img-box {
-  width: auto; /* Szerokość pojedynczego obrazu */
-}
-
-/* Zapewnia, że zdjęcia na małych ekranach będą dobrze dopasowane */
-.gallery-image img {
-  width: 100%;
-  height: auto;
-}
 }
 
