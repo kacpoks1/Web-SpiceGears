@@ -19,26 +19,48 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentIndex = 0; 
 const gallery = document.querySelector('.gallery-image'); 
 const images = document.querySelectorAll('.img-box'); 
-const visibleCount = 3; 
 
+// Funkcja do dostosowywania liczby widocznych obrazów w zależności od szerokości ekranu
+function adjustVisibleCount() {
+  if (window.innerWidth <= 768) {
+    return 1;  // Tylko 1 zdjęcie na małych ekranach
+  } else {
+    return 3;  // 3 zdjęcia na większych ekranach
+  }
+}
 
+let visibleCount = adjustVisibleCount();  // Początkowa liczba widocznych zdjęć
+
+// Funkcja do zmiany obrazów
 function changeImage() {
-  
+  visibleCount = adjustVisibleCount();  // Sprawdzenie aktualnej liczby widocznych zdjęć na podstawie rozmiaru ekranu
+
+  // Zbieramy odpowiednią liczbę obrazów
   const firstImages = Array.from(images).slice(currentIndex, currentIndex + visibleCount);
 
+  // Jeśli wycinamy mniej niż widoczna liczba obrazów, dodajemy obrazy z początku
   if (firstImages.length < visibleCount) {
     firstImages.push(...Array.from(images).slice(0, visibleCount - firstImages.length));
   }
 
-  gallery.innerHTML = '';
+  gallery.innerHTML = '';  // Czyścimy galerię przed dodaniem nowych obrazów
 
   firstImages.forEach(image => {
     gallery.appendChild(image);
   });
 
+  // Ustawiamy nowy index, uwzględniając liczbę widocznych obrazów
   currentIndex = (currentIndex + visibleCount) % images.length;
 }
 
+// Uruchamiamy zmianę obrazu
 changeImage();
 
+// Ustawiamy interwał zmiany obrazów co 3 sekundy
 setInterval(changeImage, 3000);
+
+// Dodajemy nasłuchiwacz zmiany rozmiaru okna
+window.addEventListener('resize', function() {
+  visibleCount = adjustVisibleCount();  // Ponownie dostosowujemy liczbę widocznych zdjęć przy zmianie rozmiaru okna
+});
+

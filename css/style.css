@@ -369,5 +369,18 @@ footer {
 .social-icons {
   margin-bottom: 20px;
 }
+.gallery-image {
+  width: 350px; /* Pokazujemy tylko jedno zdjęcie */
+}
+
+.img-box {
+  width: auto; /* Szerokość pojedynczego obrazu */
+}
+
+/* Zapewnia, że zdjęcia na małych ekranach będą dobrze dopasowane */
+.gallery-image img {
+  width: 100%;
+  height: auto;
+}
 }
 
