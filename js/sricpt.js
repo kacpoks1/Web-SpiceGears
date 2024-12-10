@@ -22,7 +22,7 @@ const images = document.querySelectorAll('.img-box');
 
 // Funkcja do dostosowywania liczby widocznych obrazów w zależności od szerokości ekranu
 function adjustVisibleCount() {
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth <= 1024) {
     return 1;  // Tylko 1 zdjęcie na małych ekranach
   } else {
     return 3;  // 3 zdjęcia na większych ekranach
