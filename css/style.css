@@ -320,6 +320,11 @@ footer {
   margin-top: 16px;
   margin-bottom: 16px;
 }
+.footercontainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
 .social-icons {
   margin-bottom: 20px;
