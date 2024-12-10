@@ -15,3 +15,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ustawiamy język
     setLanguage(language);
 });
+
