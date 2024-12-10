@@ -155,22 +155,27 @@ button {
 .sponsors{
   margin-top: 100px;
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .gallery-image {
   display: flex;
   justify-content: flex-start;
   overflow: hidden;
-  width: 1050px; /* Pokazujemy 3 obrazy, każdy ma szerokość 350px */
+  width: 1400px; /* Pokazujemy 3 obrazy, każdy ma szerokość 350px */
   position: relative;
-  transition: transform 1s ease-in-out; /* Płynna animacja przesunięcia */
-}
+  transition: transform 3s ease-in-out; /* Płynna animacja przesunięcia */
 
+}
 .img-box {
   box-sizing: content-box;
   margin: 10px;
   height: 250px;
-  width: 350px;
+  width: auto;
   overflow: hidden;
   display: inline-block;
   color: white;
@@ -181,7 +186,7 @@ button {
 .gallery-image img {
   height: 250px;
   width: auto;
-  object-fit: cover; /* Zachowuje proporcje obrazu */
+  object-fit:cover; /* Zachowuje proporcje obrazu */
 }
 
 
