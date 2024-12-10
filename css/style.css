@@ -306,7 +306,7 @@ footer {
 }
 footer {
   flex-direction: column;
-  align-items: center;
+  align-items:start;
   padding: 5%;
 }
 .footer-text {
