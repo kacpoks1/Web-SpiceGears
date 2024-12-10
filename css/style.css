@@ -154,20 +154,16 @@ button {
 
 .sponsors{
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .gallery-image {
-  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.gallery-image img {
-  height: 250px;
-  width: 350px;
-  transform: scale(1.0);
-  transition: transform 0.4s ease;
+  justify-content: flex-start;
+  overflow: hidden;
+  width: 1050px; /* Pokazujemy 3 obrazy, każdy ma szerokość 350px */
+  position: relative;
+  transition: transform 1s ease-in-out; /* Płynna animacja przesunięcia */
 }
 
 .img-box {
@@ -181,6 +177,15 @@ button {
   position: relative;
   background-color: white;
 }
+
+.gallery-image img {
+  height: 250px;
+  width: 350px;
+  object-fit: cover; /* Zachowuje proporcje obrazu */
+}
+
+
+
 
 button:hover {
   box-shadow: 0px 0px 20px #00b2ff;
